@@ -1,1 +1,125 @@
 
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="免費線上 QR Code 產生器，快速產生並下載 QR Code PNG 圖片。">
+  <title>QR Studio - 免費 QR Code 產生器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">
+      <span class="logo-icon">▦</span>
+      QR Studio
+    </a>
+    <span class="header-tag">FREE ONLINE TOOL</span>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <span class="eyebrow">SIMPLE · FAST · FREE</span>
+      <h1>QR Code 產生器</h1>
+      <p>輸入文字或網址，立即建立專屬 QR Code。</p>
+    </section>
+
+    <section class="workspace">
+
+      <div class="panel settings">
+        <h2>建立 QR Code</h2>
+
+        <label for="qrText">輸入網址或文字</label>
+        <textarea id="qrText"
+          placeholder="https://example.com"
+          rows="4"></textarea>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="qrSize">圖片尺寸</label>
+            <select id="qrSize">
+              <option value="200">200 × 200</option>
+              <option value="300" selected>300 × 300</option>
+              <option value="400">400 × 400</option>
+              <option value="500">500 × 500</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="color-row">
+          <div class="field">
+            <label for="darkColor">QR Code 顏色</label>
+            <input type="color" id="darkColor" value="#172554">
+          </div>
+
+          <div class="field">
+            <label for="lightColor">背景顏色</label>
+            <input type="color" id="lightColor" value="#ffffff">
+          </div>
+        </div>
+
+        <button id="generateBtn" class="primary-btn">
+          產生 QR Code →
+        </button>
+
+        <p id="message" class="message" aria-live="polite">
+          輸入內容後即可產生 QR Code
+        </p>
+      </div>
+
+      <div class="panel preview">
+        <h2>預覽結果</h2>
+
+        <div class="qr-box">
+          <div id="qrcode">
+            <div class="empty-state">
+              <span>▦</span>
+              <p>QR Code 將顯示在這裡</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="preview-caption">你的 QR Code 已準備就緒後即可下載</p>
+
+        <button id="downloadBtn" class="download-btn" disabled>
+          ↓ 下載 PNG 圖片
+        </button>
+
+        <button id="copyBtn" class="copy-btn">
+          複製輸入內容
+        </button>
+      </div>
+
+    </section>
+
+    <section class="features">
+      <div>
+        <span>⚡</span>
+        <h3>快速產生</h3>
+        <p>幾秒鐘完成 QR Code。</p>
+      </div>
+      <div>
+        <span>🎨</span>
+        <h3>自訂顏色</h3>
+        <p>打造自己的 QR Code。</p>
+      </div>
+      <div>
+        <span>⬇</span>
+        <h3>免費下載</h3>
+        <p>下載 PNG 圖片。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 QR Studio. Made with care.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

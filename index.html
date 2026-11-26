@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="免費線上工具平台，提供 QR Code、文字及圖片處理工具。">
+  <title>MyTools｜免費線上工具平台</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans TC", sans-serif;
+      background: #f5f7fb;
+      color: #172554;
+    }
+    header {
+      background: white;
+      padding: 20px 7%;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 65px 20px;
+    }
+    .hero { text-align: center; margin-bottom: 45px; }
+    .hero h1 { font-size: 38px; margin-bottom: 12px; }
+    .hero p { color: #64748b; }
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .tool {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #e5e7eb;
+      transition: .2s;
+    }
+    .tool:hover {
+      transform: translateY(-4px);
+      border-color: #818cf8;
+      box-shadow: 0 8px 25px #17255412;
+    }
+    .tool .icon { font-size: 36px; }
+    .tool h2 { font-size: 19px; }
+    .tool p { color: #64748b; font-size: 14px; }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>🧰 MyTools</header>
+
+  <main>
+    <section class="hero">
+      <h1>免費線上工具平台</h1>
+      <p>簡單、快速、方便，日常工具一次搞定。</p>
+    </section>
+
+    <section class="tools">
+      <a class="tool" href="/tools/qr-code/">
+        <div class="icon">▦</div>
+        <h2>QR Code 產生器</h2>
+        <p>輸入網址或文字，快速產生 QR Code。</p>
+      </a>
+
+      <a class="tool" href="/tools/text/">
+        <div class="icon">📝</div>
+        <h2>文字處理工具</h2>
+        <p>文字轉換與字數統計。</p>
+        <small>即將推出</small>
+      </a>
+
+      <a class="tool" href="/tools/image/">
+        <div class="icon">🖼️</div>
+        <h2>圖片工具</h2>
+        <p>圖片壓縮與格式轉換。</p>
+        <small>即將推出</small>
+      </a>
+
+      <a class="tool" href="/tools/calculator/">
+        <div class="icon">🧮</div>
+        <h2>計算機</h2>
+        <p>方便快速的日常計算工具。</p>
+        <small>即將推出</small>
+      </a>
+    </section>
+  </main>
+
+  <footer>© 2026 MyTools. All rights reserved.</footer>
+</body>
+</html>

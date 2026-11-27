@@ -1,0 +1,26 @@
+name: scrape
+
+on:
+  schedule:
+    - cron: "0 10 * * 1-5"   # UTC 10:00 = 台灣 18:00，週一到週五
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python scraper/scrape.py
+      - name: Commit if changed
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "data update" && git push)
